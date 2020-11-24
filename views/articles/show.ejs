@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Blog</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+     crossorigin="anonymous">
+    <title> Vedic Blog</title>
+    
+</head>
+<body>
+    <!-- <div class = "container"> 
+        <div class="card-body">
+            <h1 class="mb-1"> <%= article.title %></h1>
+            <div class "text-muted mb-2"><%= article.createdAt %></div>
+            <a href="/home" class = "container btn btn-secondary">All Articles</a>
+            <a href="/articles/edit/<%= article.id %>" class = "btn btn-info" class="d-inline">Edit</a>
+            <div class="container card-text mb-2">
+                <%= article.markdown %>
+            </div>
+        </div>
+        
+    </div> -->
+
+
+
+    <div class = "container"> 
+        <h1 class="mb-4">Vedic Blog</h1>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="card-title">
+                        <%= article.title %>
+                    </div> 
+                    <div class="card-subtitle text-muted mb-2">
+                        <%= article.createdAt %>
+                    </div>
+                    
+                    
+                    <a href="/home" class = "btn btn-secondary">All Articles</a>
+                     <a href="/articles/edit/<%= article.id %>" class = "btn btn-info" class="d-inline">Edit</a>
+
+                     <div class="container mt-4 col-md-12">
+
+                    </div>
+
+                     <div  class="card-text mb-2">
+                        <%= article.description %>
+                    </div>
+                     
+                </div>
+            </div>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Blog</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title> Vedic Blog</title>
+    </head>
+    <body>
+        <div class = "container"> 
+            <h1 class="mb-4">Vedic Blog</h1>
+            <a href="/articles/new" class="btn btn-success"> New Article</a>
+    
+            <% articles.forEach(article =>{ %>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <%= article.title %>
+                        </div> 
+                        <div class="card-subtitle text-muted mb-2">
+                            <%= article.createdAt %>
+                        </div>
+                        <div  class="card-text mb-2">
+                            <%= article.description %>
+                        </div>
+                        <a href="articles/<%= article.slug %>" class="btn btn-primary"> Read More</a>
+                        <a href="/articles/edit/<%= article.id %>" class = "btn btn-info">Edit</a>
+                        <form action="articles/delete/<%= article._id %>" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+        
+    </body>
+</html>
